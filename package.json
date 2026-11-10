@@ -1,0 +1,73 @@
+{
+  "name": "dsh-codex-usage-panel",
+  "version": "0.1.0",
+  "description": "Codex subscription usage card pinned at the sidebar foot, plus a quota dashboard panel. Reads the ChatGPT quota that the dsh-codex-subscription plugin reports.",
+  "type": "module",
+  "main": "./index.js",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "author": "Brian Money",
+  "homepage": "https://github.com/brianmoney/dsh-codex-usage-panel#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianmoney/dsh-codex-usage-panel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brianmoney/dsh-codex-usage-panel/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "codex",
+    "chatgpt",
+    "usage",
+    "quota",
+    "sidebar",
+    "panel"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "meta": {
+    "title": "Codex usage panel",
+    "description": "A Codex quota card pinned at the sidebar foot, styled like the Command Code panel, plus a full quota dashboard. Reads the ChatGPT subscription quota that the Codex plugin reports."
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "dsh-codex-subscription"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "dsh-codex-subscription": ">=2.5.0"
+  },
+  "peerDependenciesMeta": {
+    "dsh-codex-subscription": {
+      "optional": false
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Codex 额度面板",
+  "description": "固定在侧边栏底部的 Codex 额度卡片（样式与 Command Code 面板一致），并附带完整额度仪表盘。数据来自 Codex 插件上报的 ChatGPT 订阅额度。"
+}

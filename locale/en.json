@@ -1,0 +1,4 @@
+{
+  "title": "Codex usage panel",
+  "description": "A Codex quota card pinned at the sidebar foot, styled like the Command Code panel, plus a full quota dashboard. Reads the ChatGPT subscription quota that the Codex plugin reports."
+}

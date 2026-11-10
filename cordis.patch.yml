@@ -1,0 +1,12 @@
+# dsh-codex-usage-panel bundle layer.
+#
+# One row. The panel is entirely a browser surface, so this row carries no
+# config; it exists so the bundle composes a Loader entry, which is what lets
+# `dsh.client` publish the browser half.
+#
+# The row id and package name are unique across every layer: `client` publishes
+# the browser module under the package name, so the name here must be the exact
+# installed package specifier (an unscoped name is safe as an unquoted scalar).
+- insert:
+    - id: codex-usage-panel
+      name: dsh-codex-usage-panel
